@@ -20,4 +20,8 @@ export class AppComponent {
       this.opened_1 = !this.opened_1;
     }, 500);
   }
+
+  logChange(index) {
+    console.log(index)
+  }
 }

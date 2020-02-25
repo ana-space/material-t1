@@ -3,6 +3,7 @@
   <button mat-raised-button ><a href="#mat-lsit">List</a></button>
   <button mat-raised-button ><a href="#grid">Grid</a></button>
   <button mat-raised-button ><a href="#mat-expansion">Expansion</a></button>
+  <button mat-raised-button ><a href="#card">Card</a></button>
 </div>
 
 <div class="cont" id="#sidenav">
@@ -157,6 +158,28 @@
   </mat-accordion>
 </div> 
 
+<div class="cont" id="card">
+  <mat-card>
+    <mat-card-title>
+      This is the card title
+    </mat-card-title>
+    <mat-card-content>
+      this is the card content ........ this should be content long text
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button> Login</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="cont">
+  <mat-tab-group #tabRef (selectedTabChange)="console.log('true')">
+    <mat-tab label="Angular"> Angular Content</mat-tab>
+    <mat-tab label="React">React Content</mat-tab>
+    <mat-tab label="Vue">Vue Content</mat-tab>
+  </mat-tab-group>
+  {{tabRef.selectedIndex}}
+</div>
 <!-- 
  <div class="cont">
   <button mat-button> world </button>
