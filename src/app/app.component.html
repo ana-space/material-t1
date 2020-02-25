@@ -229,13 +229,73 @@
 </div>
 
 <div class="cont" if="input">
-  <mat-form-field>
-    <input matInput>
-
-    </input>
+<!-- <mat-form-field floatLabel="never" hideRequiredMarker> -->
+  <mat-form-field floatLabel="auto" appearance="fill" color="accent">
+  <!-- <mat-form-field floatLabel="auto" appearance="legacy"> -->
+    <mat-label >Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">min 5 characters</mat-hint>
+  </mat-form-field> 
+  <mat-form-field floatLabel="auto" appearance="outline" color="warn">
+  <!-- <mat-form-field floatLabel="auto" appearance="standard"> -->
+    <mat-label >Name</mat-label>
+    <input matInput required>
+    <mat-hint align="end">min 5 characters</mat-hint>
   </mat-form-field> 
 </div>
 
+<div class="cont" id="select">
+  <mat-form-field>
+    <mat-label>Select</mat-label>
+    <mat-select [(value)]="selectValue" multiple>
+      <mat-optgroup label="mat-optgroup 1">
+        <mat-option>None</mat-option>
+        <mat-option value="option-1"> Option 1</mat-option>
+        <mat-option value="option-2"> Option 2</mat-option>
+      </mat-optgroup>
+      <mat-optgroup label="mat-optgroup 2">
+        <mat-option>None</mat-option>
+        <mat-option value="Angular"> Angular</mat-option>
+        <mat-option value="React"> React</mat-option>
+        <mat-option value="Vue"> Vue  </mat-option>
+      </mat-optgroup>
+    </mat-select>
+  </mat-form-field>
+  <p>{{selectValue}}</p>
+  <p>{{optgroup1}}</p>
+</div>
+
+<div class="cont" id="autocomplete">
+  <mat-form-field>
+    <input matInput type="text" [matAutocomplete]="autoComp">
+    <mat-autocomplete #autoComp="matAutocomplete" >
+      <mat-option *ngFor="let autoComOption of autoComOptions" [value]="autoComOption">
+        {{autoComOption}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+
+<div class="cont">
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="autoCompObj">
+    <mat-autocomplete #autoCompObj="matAutocomplete">
+      <mat-option *ngFor="let autoComOptionsObj of autoComOptionsObjs" [value]="autoComOptionsObj.db">
+        {{autoComOptionsObj.db}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
+<div class="cont">
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="autoCompObj">
+    <mat-autocomplete #autoCompObj="matAutocomplete" [displayWith]="displayFun"> 
+      <mat-option [value]="autoComOptionsObj" *ngFor="let autoComOptionsObj of autoComOptionsObjs">
+        {{autoComOptionsObj.db}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
 <!-- 
  <div class="cont">
   <button mat-button> world </button>

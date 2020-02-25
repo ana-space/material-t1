@@ -24,4 +24,19 @@ export class AppComponent {
   // logChange(index) {
   //   console.log(index)
   // }
+
+  // form field
+  selectValue: string;
+  optgroup1: string;
+  optgroup2: string;
+
+  // autocomplete
+  autoComOptions: string[] = ['Angular', 'Node', 'PHP', 'JS'];
+  autoComOptionsObjs = [
+    {language: 'Node', db:'Mongodb', server: 'Express'},
+    {language: 'java', db:'Sql', server:'apache'}
+  ]
+  displayFun(subject) {
+    return subject ? subject.db : undefined; 
+  }
 }
