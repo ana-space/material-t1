@@ -21,7 +21,7 @@ export class AppComponent {
     }, 500);
   }
 
-  logChange(index) {
-    console.log(index)
-  }
+  // logChange(index) {
+  //   console.log(index)
+  // }
 }

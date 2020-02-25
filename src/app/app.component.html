@@ -173,12 +173,59 @@
 </div>
 
 <div class="cont">
-  <mat-tab-group #tabRef (selectedTabChange)="console.log('true')">
+  <!-- <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)"> -->
+  <mat-tab-group #tabRef>
     <mat-tab label="Angular"> Angular Content</mat-tab>
     <mat-tab label="React">React Content</mat-tab>
     <mat-tab label="Vue">Vue Content</mat-tab>
   </mat-tab-group>
-  {{tabRef.selectedIndex}}
+ {{tabRef.selectedIndex}} 
+</div>
+
+<div class="cont">
+  <mat-horizontal-stepper>
+    <mat-step label="First Step" completed=true>
+      <p> content of the first step</p>
+      <button mat-button matStepperNext> Next</button>
+    </mat-step>
+    <mat-step label="Second Step" completed=true optional>
+      <p>content of the second step</p>
+      <button mat-button matStepperPrevious>back</button>
+      <button mat-button matStepperNext> Next</button>
+    </mat-step>
+    <mat-step label="theard Step" completed=false>
+      <p>content of the therd step</p>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext>Next</button>
+    </mat-step>
+    <mat-step label="forth Step" completed=false>
+      <p>content of the therd step</p>
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-horizontal-stepper>
+</div>
+
+<div class="cont">
+  <mat-vertical-stepper>
+    <mat-step label="First Step" completed=true>
+      <p> content of the first step</p>
+      <button mat-button matStepperNext> Next</button>
+    </mat-step>
+    <mat-step label="Second Step" completed= true optional>
+      <p>content of the second step</p>
+      <button mat-button matStepperPrevious>back</button>
+      <button mat-button matStepperNext> Next</button>
+    </mat-step>
+    <mat-step label="theard Step" completed=false>
+      <p>content of the therd step</p>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button matStepperNext> Next</button>
+    </mat-step>
+    <mat-step label="forth Step" completed=false>
+      <p>content of the therd step</p>
+      <button mat-button matStepperPrevious>Back</button>
+    </mat-step>
+  </mat-vertical-stepper>
 </div>
 <!-- 
  <div class="cont">
