@@ -37,16 +37,17 @@
   </mat-menu>
 </div>
 
-<!-- <div class="cont">
-  <mat-menu #lazyMenu="matMenu">
+ <div class="cont">
+   <mat-menu #lazyMenu="matMenu">
     <ng-template matMenuContent let-name="name" let-hobby="hobby">
       <button mat-menu-item>setting </button>
+      <button mat-menu-item> Hobby is {{ hobby }}</button>
       <button mat-menu-item>Log out {{ name }}</button>
     </ng-template>
   </mat-menu>
-  <button mat-raised-button [matMenuTriggerData]="{name: 'Vishwas', hobby: 'football'}" [matMenuTriggerFor]="lazyMenu">Vishwas</button>
-  <button mat-raised-button [matMenuTriggerD ata]="{name: 'Codevolution', hobby: 'teaching'}" [matMenuTriggerFor]="lazyMenu">Vishwas</button>
-</div> -->
+  <button mat-raised-button [matMenuTriggerData]="{name: 'PHP', hobby: 'walk'}" [matMenuTriggerFor]="lazyMenu">Ahmad</button>
+  <button mat-raised-button [matMenuTriggerData]="{name: 'Node', hobby: 'run'}" [matMenuTriggerFor]="lazyMenu">Anna</button>
+</div> 
 
 <!-- <div class="cont">
   <button mat-button> world </button>
