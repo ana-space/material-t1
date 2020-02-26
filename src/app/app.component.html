@@ -1,4 +1,10 @@
 <div class="cont">
+  <button mat-raised-button > <a href="#mat-sidenav">Sidenav</a></button>
+  <button mat-raised-button ><a href="#mat-lsit">List</a></button>
+  <button mat-raised-button ><a href="#grid">grid</a></button>
+</div>
+
+<div class="cont" id="#sidenav">
   <mat-sidenav-container>
     <!-- #  uses to create templeat refrence var -->
     <mat-sidenav mode="side" (opened)="log('Opened')" (closed)="log('Closed')" #sidenav [(opened)]="opened"> Sidenav </mat-sidenav>
@@ -50,7 +56,7 @@
   <button mat-raised-button [matMenuTriggerData]="{name: 'Node', hobby: 'run'}" [matMenuTriggerFor]="lazyMenu">Anna</button>
 </div> 
 
-<div class="cont" dense>
+<div class="cont" id="mat-list" dense >
   <mat-divider></mat-divider>
   <mat-list>
     <mat-list-item>item 1</mat-list-item>
@@ -74,7 +80,7 @@
   </mat-list>
 </div>
 <!-- nav list -->
-<div class="cont">
+<div class="cont" id="list">
     <mat-nav-list>
       <a mat-list-item href="">Home</a>
       <a mat-list-item href="">About</a>
@@ -82,7 +88,24 @@
     </mat-nav-list>
 </div>
 
+<!-- Grid -->
+<div class="cont" id="grid">
+  <!-- <mat-grid-list cols="3" rowHeight="100px" > -->
+  <!-- <mat-grid-list cols="3" rowHeight="1.5:1" > -->
+  <mat-grid-list cols="3" rowHeight="fit" style="height: 200px;">
+    <mat-grid-tile rowspan="2">Title 1</mat-grid-tile>
+    <mat-grid-tile>Title 2</mat-grid-tile>
+    <mat-grid-tile>Title 3</mat-grid-tile>
+    <mat-grid-tile colspan="2">Title 4</mat-grid-tile>
+    <mat-grid-tile>Title 5</mat-grid-tile>
+    <mat-grid-tile>Title 6</mat-grid-tile>
+    <mat-grid-tile>Title 7</mat-grid-tile>
+    <mat-grid-tile>Title 8</mat-grid-tile>
+    <mat-grid-tile>Title 9</mat-grid-tile>
+  </mat-grid-list>
+</div>
 
+ 
 <!-- 
  <div class="cont">
   <button mat-button> world </button>
