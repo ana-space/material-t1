@@ -1,7 +1,8 @@
 <div class="cont">
   <button mat-raised-button > <a href="#mat-sidenav">Sidenav</a></button>
   <button mat-raised-button ><a href="#mat-lsit">List</a></button>
-  <button mat-raised-button ><a href="#grid">grid</a></button>
+  <button mat-raised-button ><a href="#grid">Grid</a></button>
+  <button mat-raised-button ><a href="#mat-expansion">Expansion</a></button>
 </div>
 
 <div class="cont" id="#sidenav">
@@ -105,7 +106,57 @@
   </mat-grid-list>
 </div>
 
- 
+ <div class="cont" id="mat-expansion">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular Fundamentals
+        </mat-panel-title>
+        <mat-panel-description>
+          Total Duration : 3 hours
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This is the panel content. Add course details.</p>
+      <mat-action-row>
+        <button mat-button>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+ </div>
+
+ <div class="cont" id="mat-expansion">
+  <!-- <mat-accordion> -->
+  <mat-accordion multi="true" hideToggle="true"> 
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular Fundamentals
+        </mat-panel-title>
+        <mat-panel-description>
+          Total Duration : 3 hours
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This is the panel content. Add course details.</p>
+      <mat-action-row>
+        <button mat-button>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Angular Material
+        </mat-panel-title>
+        <mat-panel-description>
+          Total Duration : 2 hours
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This is the panel content. Add course details.</p>
+      <mat-action-row>
+        <button mat-button>Enroll</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+</div> 
+
 <!-- 
  <div class="cont">
   <button mat-button> world </button>
