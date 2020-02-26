@@ -9,6 +9,7 @@
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>
+
 <div class="cont">
   <mat-sidenav-container>
     <!-- #  uses to create templeat refrence var -->
@@ -29,7 +30,7 @@
   </mat-menu>
 
   <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
-
+  <mat-divider></mat-divider>
   <mat-menu #subMenu="matMenu">
     <button mat-menu-item>Angular</button>
     <button mat-menu-item>React</button>
@@ -49,7 +50,41 @@
   <button mat-raised-button [matMenuTriggerData]="{name: 'Node', hobby: 'run'}" [matMenuTriggerFor]="lazyMenu">Anna</button>
 </div> 
 
-<!-- <div class="cont">
+<div class="cont" dense>
+  <mat-divider></mat-divider>
+  <mat-list>
+    <mat-list-item>item 1</mat-list-item>
+    <mat-list-item>
+      <mat-icon matListIcon>home</mat-icon>
+      <h3 matLine>Heading</h3>
+      <p matLine>Line</p>
+    </mat-list-item>
+    <mat-list-item>
+      <mat-icon matListIcon>folder</mat-icon>
+      <h3 matLine>Heading 2</h3>
+      <p matLine>Line 2</p>
+    </mat-list-item>
+    <mat-divider></mat-divider>
+    <mat-list-item>
+      <mat-icon matIcon>home </mat-icon>
+      <h3 matLine>Heading 2</h3>
+      <p matLine>Line 2</p>
+    </mat-list-item>
+    <mat-list-item>item 4</mat-list-item>
+  </mat-list>
+</div>
+<!-- nav list -->
+<div class="cont">
+    <mat-nav-list>
+      <a mat-list-item href="">Home</a>
+      <a mat-list-item href="">About</a>
+      <a mat-list-item href="">Services</a>
+    </mat-nav-list>
+</div>
+
+
+<!-- 
+ <div class="cont">
   <button mat-button> world </button>
 </div>
 
@@ -105,4 +140,4 @@
   <button mat-button [matBadge]="notification" [matBadgeHidden]="notification ==  0" matBadgePosition="below"> this is span</button><br>
   <span matBadge="4" matBadgePosition="below before"> this is span</span><br>
   <span matBadge="3" matBadgePosition="above"> this is span</span><br>
-</div>  -->
+</div>  --> -->

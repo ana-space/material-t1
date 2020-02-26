@@ -5,6 +5,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatMenuModule } from '@angular/material/menu'
+import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
 // import { from } from 'rxjs';
 
 const MaterialComponents = [
@@ -13,7 +15,9 @@ const MaterialComponents = [
   MatIconModule,
   MatBadgeModule,
   MatSidenavModule,
-  MatMenuModule
+  MatMenuModule,
+  MatListModule,
+  MatDividerModule
 ]
 
 @NgModule({
