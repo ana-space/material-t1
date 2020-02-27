@@ -300,8 +300,8 @@
 <!-- // Form autocheckspell -->
 <div class="cont" id="autoSpellCheck">
   <mat-form-field>
-    <input type="text" matInput  [matAutocomplete]="getval" [formControl]="myControal">
-    <mat-autocomplete #getval="matAutocomplete" >
+    <input type="text" matInput  [matAutocomplete]="get" [formControl]="myControal">
+    <mat-autocomplete #get="matAutocomplete" >
       <mat-option [value]="op" *ngFor="let op of filteredOptions | async">
         {{op}}
       </mat-option>
@@ -332,6 +332,20 @@
   </mat-radio-group>
 </div>
 
+<div class="cont">
+  <button 
+  mat-raised-button 
+  matTooltip="this is Tooltip"
+  ></button>
+</div>
+
+<!-- <div class="cont" id="datepicker">
+  <mat-form-field>
+    <input  matInput [myDatePicker]="myDatePicker">
+    <mat-datepicker-toggle></mat-datepicker-toggle>
+    <mat-datepicker #myDatePicker></mat-datepicker>
+  </mat-form-field>
+</div> -->
 <!-- <div class="cont" id="datepicker">
   <mat-form-field>
     <input type="text" matInput [matDatepicker]="myDatePicker">
@@ -396,4 +410,4 @@
   <button mat-button [matBadge]="notification" [matBadgeHidden]="notification ==  0" matBadgePosition="below"> this is span</button><br>
   <span matBadge="4" matBadgePosition="below before"> this is span</span><br>
   <span matBadge="3" matBadgePosition="above"> this is span</span><br>
-</div>  --> -->
+</div>  -->
