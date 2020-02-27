@@ -336,7 +336,19 @@
   <button 
   mat-raised-button 
   matTooltip="this is Tooltip"
-  ></button>
+  matTooltipPosition="after"
+  matTooltipShowDelay="2000"
+  matTooltipHideDelay="2000"
+  >Hello you find tooltip</button>
+</div>
+
+<div class="cont" id="snackbar">
+  <button mat-button (click)="openSnackBar('Item Deleted', 'Dismiss')">
+    Show Snack Bar
+  </button>
+  <button mat-button (click)="openSnackBar('Item Deleted', 'Undo')">
+    Delete
+  </button>
 </div>
 
 <!-- <div class="cont" id="datepicker">

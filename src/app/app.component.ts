@@ -2,6 +2,7 @@
   import { FormControl } from '@angular/forms'
   import { Observable } from 'rxjs';
   import { map, startWith } from 'rxjs/operators'
+  import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
   @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor (private snackBar: MatSnackBar) {}
   title = 'material-t1';
   notification = 0;
   opened= true;
@@ -60,5 +62,13 @@ export class AppComponent {
     return this.autoComOptions.filter(autoComOption =>
       autoComOption.toLowerCase().includes(filterValue))
   }
-
+  openSnackBar(message, action) {
+    let snackBarRef = this.snackBar.open(message, action, {duration:2000});
+    snackBarRef.afterDismissed().subscribe((sn) => {
+      console.log('afterDismissed' + sn); console.log('snack bar been closed!');
+    })
+    snackBarRef.onAction().subscribe((sna) => {
+      console.log('onAction' + sna); console.log('snack bar action was triggered!')
+    })
+  }
 }
