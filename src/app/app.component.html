@@ -296,6 +296,18 @@
     </mat-autocomplete>
   </mat-form-field>
 </div>
+
+<!-- // Form autocheckspell -->
+<div class="cont" id="autoSpellCheck">
+  <mat-form-field>
+    <input type="text" matInput  [matAutocomplete]="getval" [formControl]="myControal">
+    <mat-autocomplete #getval="matAutocomplete" >
+      <mat-option [value]="op" *ngFor="let op of filteredOptions | async">
+        {{op}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</div>
 <!-- 
  <div class="cont">
   <button mat-button> world </button>
