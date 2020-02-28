@@ -8,10 +8,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MaterialModule } from './material/material.module'
 
+import { CustomSbackBarComponent } from './mat/mat.component';
+import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import { TableDisplayFlexComponent } from './table-display-flex/table-display-flex.component';
+import { MatComponent } from './mat/mat.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CustomSbackBarComponent,
+    DialogExampleComponent,
+    TableDisplayFlexComponent,
+    MatComponent
   ],
+  entryComponents:[CustomSbackBarComponent, DialogExampleComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

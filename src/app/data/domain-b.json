@@ -1,0 +1,58 @@
+{
+  "result": 1,
+  "data": {
+    "id": 1029164,
+    "hostname": "ana.plista.com",
+    "title": "ana.plista.com",
+    "geolocation": "country_code:de",
+    "links": [{
+      "rel": "self",
+      "ref": "https:\/\/api.plista.com\/de\/domains\/1029164",
+      "version": false,
+      "identifier": "singleDomain",
+      "niceName": "getDomain",
+      "path": "\/de\/domains\/1029164",
+      "method": "GET",
+      "prefix": "domains"
+    }, {
+      "rel": "extWWWContentStats",
+      "ref": "https:\/\/selfservice.plista.com\/de\/publisher\/statistics\/standard\/draw\/summary?dom=1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }, {
+      "rel": "extWWWAdStats",
+      "ref": "https:\/\/selfservice.plista.com\/de\/publisher\/statistics\/crossdomain\/draw\/summary?dom=1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }, {
+      "rel": "extCRM",
+      "ref": "https:\/\/crm.plista.com\/tools\/showdomain\/1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }, {
+      "rel": "extAdmin",
+      "ref": "\/other\/domains?info=1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }],
+    "state": {
+      "deletable": 0
+    }
+  }
+}

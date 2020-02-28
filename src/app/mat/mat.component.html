@@ -1,0 +1,451 @@
+<div class="cont">
+    <button mat-raised-button ><a href="#mat-sidenav">Sidenav</a></button>
+    <button mat-raised-button ><a href="#mat-lsit">List</a></button>
+    <button mat-raised-button ><a href="#grid">Grid</a></button>
+    <button mat-raised-button ><a href="#mat-expansion">Expansion</a></button>
+    <button mat-raised-button ><a href="#card">Card</a></button>
+    <button mat-raised-button ><a href="#stepper">Stepper</a></button>
+    <button mat-raised-button ><a href="#input">Input</a></button> 
+    <button mat-raised-button ><a href="#select">Select</a></button> 
+    <button mat-raised-button ><a href="#autocomplete">Autocomplete</a></button>
+    <button mat-raised-button ><a href="#autoSpellCheck">AutoSpellCheck</a></button> 
+    <button mat-raised-button ><a href="#radio-group">Radio-Group</a></button> 
+    <button mat-raised-button ><a href="#tooltip">Tooltip</a></button> 
+    <button mat-raised-button ><a href="#snackbar">Snackbar</a></button> 
+    <button mat-raised-button ><a href="#checkbox">Checkbox</a></button> 
+    <button mat-raised-button ><a href="#checkbox">Checkbox</a></button> 
+    <button mat-raised-button ><a href="#checkbox">Checkbox</a></button> 
+    <button mat-raised-button href="#checkbox">Checkbox</button> 
+  </div>
+  
+  <div class="cont" id="#sidenav">
+    <mat-sidenav-container>
+      <!-- #  uses to create templeat refrence var -->
+      <mat-sidenav mode="side" (opened)="log('Opened')" (closed)="log('Closed')" #sidenav [(opened)]="opened"> Sidenav </mat-sidenav>
+      <mat-sidenav-content> 
+        <button mat-button (click)="opened=!opened"> toggle navbar</button>Main 
+        <button mat-button (click)="sidenav.open()">Open</button>
+        <button mat-button (click)="sidenav.close()">Close</button>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  
+  <div class="cont">
+    <mat-sidenav-container>
+      <!-- #  uses to create templeat refrence var -->
+      <mat-sidenav mode="side" (closed)="log('Closed')" #sidenav_1 [(opened)]="opened_1"> Sidenav </mat-sidenav>
+      <mat-sidenav-content> 
+        <button mat-button (click)="opened_1=!opened_1"> toggle navbar</button>Main 
+        <button mat-button (click)="sidenav_1.open()">Open</button>
+        <button mat-button (click)="sidenav_1.close()">Close</button>
+        <button mat-button (click)="toggle(opened_1)">Toggle</button>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+  
+  <div class="cont">
+    <mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+      <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
+      <button mat-menu-item>BackEnd</button>
+    </mat-menu>
+  
+    <button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+    <mat-divider></mat-divider>
+    <mat-menu #subMenu="matMenu">
+      <button mat-menu-item>Angular</button>
+      <button mat-menu-item>React</button>
+      <button mat-menu-item>Vue</button>
+    </mat-menu>
+  
+  </div>
+  
+   <div class="cont">
+     <mat-menu #lazyMenu="matMenu">
+      <ng-template matMenuContent let-name="name" let-hobby="hobby">
+        <button mat-menu-item>setting </button>
+        <button mat-menu-item> Hobby is {{ hobby }}</button>
+        <button mat-menu-item>Log out {{ name }}</button>
+      </ng-template>
+    </mat-menu>
+    <button mat-raised-button [matMenuTriggerData]="{name: 'PHP', hobby: 'walk'}" [matMenuTriggerFor]="lazyMenu">Ahmad</button>
+    <button mat-raised-button [matMenuTriggerData]="{name: 'Node', hobby: 'run'}" [matMenuTriggerFor]="lazyMenu">Anna</button>
+  </div> 
+  
+  <div class="cont" id="mat-list" dense >
+    <mat-divider></mat-divider>
+    <mat-list>
+      <mat-list-item>item 1</mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>home</mat-icon>
+        <h3 matLine>Heading</h3>
+        <p matLine>Line</p>
+      </mat-list-item>
+      <mat-list-item>
+        <mat-icon matListIcon>folder</mat-icon>
+        <h3 matLine>Heading 2</h3>
+        <p matLine>Line 2</p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon matIcon>home </mat-icon>
+        <h3 matLine>Heading 2</h3>
+        <p matLine>Line 2</p>
+      </mat-list-item>
+      <mat-list-item>item 4</mat-list-item>
+    </mat-list>
+  </div>
+  <!-- nav list -->
+  <div class="cont" id="list">
+      <mat-nav-list>
+        <a mat-list-item href="">Home</a>
+        <a mat-list-item href="">About</a>
+        <a mat-list-item href="">Services</a>
+      </mat-nav-list>
+  </div>
+  
+  <!-- Grid -->
+  <div class="cont" id="grid">
+    <!-- <mat-grid-list cols="3" rowHeight="100px" > -->
+    <!-- <mat-grid-list cols="3" rowHeight="1.5:1" > -->
+    <mat-grid-list cols="3" rowHeight="fit" style="height: 200px;">
+      <mat-grid-tile rowspan="2">Title 1</mat-grid-tile>
+      <mat-grid-tile>Title 2</mat-grid-tile>
+      <mat-grid-tile>Title 3</mat-grid-tile>
+      <mat-grid-tile colspan="2">Title 4</mat-grid-tile>
+      <mat-grid-tile>Title 5</mat-grid-tile>
+      <mat-grid-tile>Title 6</mat-grid-tile>
+      <mat-grid-tile>Title 7</mat-grid-tile>
+      <mat-grid-tile>Title 8</mat-grid-tile>
+      <mat-grid-tile>Title 9</mat-grid-tile>
+    </mat-grid-list>
+  </div>
+  
+   <div class="cont" id="mat-expansion">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Angular Fundamentals
+          </mat-panel-title>
+          <mat-panel-description>
+            Total Duration : 3 hours
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add course details.</p>
+        <mat-action-row>
+          <button mat-button>Enroll</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+   </div>
+  
+   <div class="cont" id="mat-expansion">
+    <!-- <mat-accordion> -->
+    <mat-accordion multi="true" hideToggle="true"> 
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Angular Fundamentals
+          </mat-panel-title>
+          <mat-panel-description>
+            Total Duration : 3 hours
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add course details.</p>
+        <mat-action-row>
+          <button mat-button>Enroll</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Angular Material
+          </mat-panel-title>
+          <mat-panel-description>
+            Total Duration : 2 hours
+          </mat-panel-description>
+        </mat-expansion-panel-header>
+        <p>This is the panel content. Add course details.</p>
+        <mat-action-row>
+          <button mat-button>Enroll</button>
+        </mat-action-row>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div> 
+  
+  <div class="cont" id="card">
+    <mat-card>
+      <mat-card-title>
+        This is the card title
+      </mat-card-title>
+      <mat-card-content>
+        this is the card content ........ this should be content long text
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-flat-button> Login</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+  <div class="cont">
+    <!-- <mat-tab-group #tabRef (selectedTabChange)="logChange(tabRef.selectedIndex)"> -->
+    <mat-tab-group #tabRef>
+      <mat-tab label="Angular"> Angular Content</mat-tab>
+      <mat-tab label="React">React Content</mat-tab>
+      <mat-tab label="Vue">Vue Content</mat-tab>
+    </mat-tab-group>
+   {{tabRef.selectedIndex}} 
+  </div>
+  
+  <div class="cont" id="stepper">
+    <mat-horizontal-stepper>
+      <mat-step label="First Step" completed=true>
+        <p> content of the first step</p>
+        <button mat-button matStepperNext> Next</button>
+      </mat-step>
+      <mat-step label="Second Step" completed=true optional>
+        <p>content of the second step</p>
+        <button mat-button matStepperPrevious>back</button>
+        <button mat-button matStepperNext> Next</button>
+      </mat-step>
+      <mat-step label="theard Step" completed=false>
+        <p>content of the therd step</p>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </mat-step>
+      <mat-step label="forth Step" completed=false>
+        <p>content of the therd step</p>
+        <button mat-button matStepperPrevious>Back</button>
+      </mat-step>
+    </mat-horizontal-stepper>
+  </div>
+  
+  <div class="cont">
+    <mat-vertical-stepper>
+      <mat-step label="First Step" completed=true>
+        <p> content of the first step</p>
+        <button mat-button matStepperNext> Next</button>
+      </mat-step>
+      <mat-step label="Second Step" completed= true optional>
+        <p>content of the second step</p>
+        <button mat-button matStepperPrevious>back</button>
+        <button mat-button matStepperNext> Next</button>
+      </mat-step>
+      <mat-step label="theard Step" completed=false>
+        <p>content of the therd step</p>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext> Next</button>
+      </mat-step>
+      <mat-step label="forth Step" completed=false>
+        <p>content of the therd step</p>
+        <button mat-button matStepperPrevious>Back</button>
+      </mat-step>
+    </mat-vertical-stepper>
+  </div>
+  
+  <div class="cont" if="input">
+  <!-- <mat-form-field floatLabel="never" hideRequiredMarker> -->
+    <mat-form-field floatLabel="auto" appearance="fill" color="accent">
+    <!-- <mat-form-field floatLabel="auto" appearance="legacy"> -->
+      <mat-label >Name</mat-label>
+      <input matInput required>
+      <mat-hint align="end">min 5 characters</mat-hint>
+    </mat-form-field> 
+    <mat-form-field floatLabel="auto" appearance="outline" color="warn">
+    <!-- <mat-form-field floatLabel="auto" appearance="standard"> -->
+      <mat-label >Name</mat-label>
+      <input matInput required>
+      <mat-hint align="end">min 5 characters</mat-hint>
+    </mat-form-field> 
+  </div>
+  
+  <div class="cont" id="select">
+    <mat-form-field>
+      <mat-label>Select</mat-label>
+      <mat-select [(value)]="selectValue" multiple>
+        <mat-optgroup label="mat-optgroup 1">
+          <mat-option>None</mat-option>
+          <mat-option value="option-1"> Option 1</mat-option>
+          <mat-option value="option-2"> Option 2</mat-option>
+        </mat-optgroup>
+        <mat-optgroup label="mat-optgroup 2">
+          <mat-option>None</mat-option>
+          <mat-option value="Angular"> Angular</mat-option>
+          <mat-option value="React"> React</mat-option>
+          <mat-option value="Vue"> Vue  </mat-option>
+        </mat-optgroup>
+      </mat-select>
+    </mat-form-field>
+    <p>{{selectValue}}</p>
+    <p>{{optgroup1}}</p>
+  </div>
+  
+  <div class="cont" id="autocomplete">
+    <mat-form-field>
+      <input matInput type="text" [matAutocomplete]="autoComp">
+      <mat-autocomplete #autoComp="matAutocomplete" >
+        <mat-option *ngFor="let autoComOption of autoComOptions" [value]="autoComOption">
+          {{autoComOption}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  
+  <div class="cont">
+    <mat-form-field>
+      <input type="text" matInput [matAutocomplete]="autoCompObj">
+      <mat-autocomplete #autoCompObj="matAutocomplete">
+        <mat-option *ngFor="let autoComOptionsObj of autoComOptionsObjs" [value]="autoComOptionsObj.db">
+          {{autoComOptionsObj.db}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  <div class="cont">
+    <mat-form-field>
+      <input type="text" matInput [matAutocomplete]="autoCompObj">
+      <mat-autocomplete #autoCompObj="matAutocomplete" [displayWith]="displayFun"> 
+        <mat-option [value]="autoComOptionsObj" *ngFor="let autoComOptionsObj of autoComOptionsObjs">
+          {{autoComOptionsObj.db}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  
+  <!-- // Form autocheckspell -->
+  <div class="cont" id="autoSpellCheck">
+    <mat-form-field>
+      <input type="text" matInput  [matAutocomplete]="get" [formControl]="myControal">
+      <mat-autocomplete #get="matAutocomplete" >
+        <mat-option [value]="op" *ngFor="let op of filteredOptions | async">
+          {{op}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+  
+  <div class="cont" id="checkbox">
+    <mat-checkbox>
+      Subscribe
+    </mat-checkbox>
+    <br>
+    <mat-checkbox labelPosition="end">
+      Subscribe too
+    </mat-checkbox>
+    <br>
+    <mat-checkbox color="primary" labelPosition="end">
+      Subscribe too too
+    </mat-checkbox>
+  </div>
+  <!-- // additioanl info you find in same chanel form controlar  -->
+  <div class="cont" id="radio-group">
+    <mat-radio-group>
+      <mat-radio-button value="node"> Node</mat-radio-button>
+      <mat-radio-button value="express"> Express</mat-radio-button>
+      <mat-radio-button value="PHP"> PHP</mat-radio-button>
+      <mat-radio-button value="angular"> Angular</mat-radio-button>
+    </mat-radio-group>
+  </div>
+  
+  <div class="cont" id="tooltip">
+    <button 
+    mat-raised-button 
+    matTooltip="this is Tooltip"
+    matTooltipPosition="after"
+    matTooltipShowDelay="2000"
+    matTooltipHideDelay="2000"
+    >Hello you find tooltip</button>
+  </div>
+  
+  <div class="cont" id="snackbar">
+    <button mat-button (click)="openSnackBar('Item Deleted', 'Dismiss')">
+      Show Snack Bar
+    </button>
+    <button mat-button (click)="openSnackBar('Item Deleted', 'Undo')">
+      Delete
+    </button>
+  </div>
+  
+  
+  <div class="cont" id="customsnackbar">
+    <button mat-button (click)="openCustomSnackBar()">
+      Show custom SnackBar
+    </button>
+  </div>
+  
+  <div class="cont" id="dialog">
+    <p>you need to import angular mat dialog services</p> 
+    <button mat-button (click)="openDialog()"> Open Dialog</button>
+  </div>
+  
+  <!-- <div class="cont" id="datepicker">
+    <mat-form-field>
+      <input  matInput [myDatePicker]="myDatePicker">
+      <mat-datepicker-toggle></mat-datepicker-toggle>
+      <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+  </div> -->
+  <!-- <div class="cont" id="datepicker">
+    <mat-form-field>
+      <input type="text" matInput [matDatepicker]="myDatePicker">
+      <mat-datepicker-toggle [for]="myDatePicker" matsuffix></mat-datepicker-toggle>
+      <mat-datepicker #myDatePicker></mat-datepicker>
+    </mat-form-field>
+  </div> -->
+  <!-- 
+   <div class="cont">
+    <button mat-button> world </button>
+  </div>
+  
+  <div class="cont">
+    <h3>Typography</h3>
+    <p > world deles withe the style and font size there is diffrent level</p>
+    <div class="mat-display-4">this is display 4</div>
+    <div class="mat-display-3">this is display 3</div>
+    <div class="mat-display-2">this is display 2</div>
+    <div class="mat-display-1">this is display 1</div>
+  </div>
+  
+  <div class="cont">
+    <h3>angulaar provide 6 cases and 3 color</h3>
+    <button mat-button> button 1</button>
+    <button mat-raised-button> button 1</button>
+    <button mat-flat-button> button 1</button>
+    <button mat-stroked-button> button 1</button>
+  </div>
+  
+  <div class="cont">
+    <button mat-icon-button> icon</button>
+    <button mat-fab>fab</button>
+    <button mat-mini-fab> mfab </button>
+  </div> 
+  <div class="cont">
+    <mat-button-toggle mat-button-toggle disableRipple #matbt="">Toggle</mat-button-toggle> {{matbt.checked}}
+  </div>
+  <div class="cont">
+     # is templet refrance var -->
+    <!-- <mat-button-toggle-group #matbuttontogglegroup='matButtonToggleGroup' multiple id='button-toggle-group' href='button-toggle-group'>
+      <mat-button-toggle value="angular_1">Angular_1</mat-button-toggle>
+      <mat-button-toggle value="angular_2">Angular_2</mat-button-toggle>
+      <mat-button-toggle value="angular_3">Angular_3</mat-button-toggle>
+    </mat-button-toggle-group>
+    <p>matbuttontogglegroup value matbuttontogglegroup: </p>{{matbuttontogglegroup.value}} -->
+    <!-- // angular  component interaction using refrence vareble withe in component class -->
+  <!-- </div>
+  
+  <div class="cont">
+    <p>mat icon</p>
+    <p>the mat icon component accept material icon font</p> -->
+  
+     <!-- the mat icon component accept material icon font -->
+  
+  
+    <!-- <mat-icon>accessibility_new</mat-icon>
+    <mat-icon>all_inbox </mat-icon>
+    <p>u can use your one svg there is quide how to use them as well </p>
+    <p>u can find all info on who to use them on angular material web page under icon</p>
+  </div>
+  <div class="cont">
+    <button mat-button [matBadge]="notification" [matBadgeHidden]="notification ==  0" matBadgePosition="below"> this is span</button><br>
+    <span matBadge="4" matBadgePosition="below before"> this is span</span><br>
+    <span matBadge="3" matBadgePosition="above"> this is span</span><br>
+  </div>  -->
+  

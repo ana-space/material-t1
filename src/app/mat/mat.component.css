@@ -1,0 +1,21 @@
+.cont {
+    /* margin: 10px; */
+}
+
+mat-sidenav-container {
+    height: 100%;
+    min-height: 100px;;
+}
+mat-sidenav, mat-sidenav-content {
+    padding: 16px;
+}
+
+mat-sidenav {
+    background-color: lightcoral;
+    width: 200px;
+}
+
+mat-grid-tile {
+    background-color: lightcoral;
+
+}

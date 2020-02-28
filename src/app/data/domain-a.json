@@ -1,0 +1,142 @@
+{
+  "result": 1,
+  "data": {
+    "id": 1029164,
+    "basicSetup": {
+      "hostname": "ana.plista.com",
+      "title": "ana.plista.com",
+      "geolocation": "de",
+      "currency": "EUR",
+      "matchingType": "regexp",
+      "matchingRule": "(.+.)?ana.plista.com",
+      "channels": [],
+      "categories": [],
+      "timezone": "Europe\/Berlin",
+      "sourceTypes": [],
+      "channelId": null
+    },
+    "api": {
+      "apiKey": "9r0g76imhm3PLqzoOwS9jU5h84YQxHLy",
+      "publicKey": "07481d7e18bd3e8941d39b21",
+      "app": "no"
+    },
+    "state": {
+      "status": "active",
+      "demo": 1,
+      "cookie": 0,
+      "api": 0,
+      "adNetwork": 0,
+      "publisher": 1,
+      "advertiser": 0,
+      "cookieDemo": 0,
+      "osrPublisher": 0,
+      "deletable": 0
+    },
+    "algorithm": {
+      "semanticBoost": 0,
+      "recommendationAge": null,
+      "recommendationAgeUnit": "",
+      "cookieLifetime": 0
+    },
+    "revenue": {
+      "widgetBilling": 0
+    },
+    "options": {
+      "crawler": {
+        "crawlItems": "",
+        "crawlCreatedAsModifiedWhenEmpty": 0,
+        "crawlerOgConvregexpImg": "",
+        "crawlerOgConvregexpKicker": "",
+        "crawlerOgConvregexpTitle": "",
+        "crawlerOgConvregexpUrl": "",
+        "crawlExceptPublishedAt": 0,
+        "crawlSpecialcharsDecodeEntQuotes": 0
+      },
+      "domains": {
+        "payoutLimit": 0,
+        "paymentClearance": null,
+        "lastBilling": 0,
+        "widgetForbidLocalstoragePookie": 0,
+        "createdAt": 0,
+        "patternUpdatedAt": 1576767138,
+        "selfservice": 0,
+        "useAsyncJS": 0,
+        "widgetOBA": 0,
+        "language": null,
+        "itemApiUpdateDelay": 0,
+        "itemApiUpdateMax": 0,
+        "onsiteStaticRecs": "",
+        "crossdomainstats_expansion": 0,
+        "useturbine": null,
+        "postview_3rdparty_disable": 0,
+        "channelTag": null
+      },
+      "iframe": {
+        "fixedVisibilityForStats": 0,
+        "allowVideo": 0
+      },
+      "items": {
+        "canIndexFulltext": 0,
+        "hideRedirectUrl": 0,
+        "jpgImageOnly": 0,
+        "mediamirrorValidMimetypes": "",
+        "imageSize": "",
+        "cropImages": 0,
+        "allowOSRTextEmpty": 0,
+        "redirectParam": "",
+        "maxPixelRatio": null
+      },
+      "ssp": {
+        "dsp": 0,
+        "ignoreParams": 0,
+        "useJavascript": 0
+      }
+    },
+    "links": [{
+      "rel": "self",
+      "ref": "https:\/\/api.plista.com\/de\/domains\/1029164",
+      "version": false,
+      "identifier": "singleDomain",
+      "niceName": "getDomain",
+      "path": "\/de\/domains\/1029164",
+      "method": "GET",
+      "prefix": "domains"
+    }, {
+      "rel": "extWWWContentStats",
+      "ref": "https:\/\/selfservice.plista.com\/publisher\/statistics\/standard\/draw\/summary?dom=1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }, {
+      "rel": "extWWWAdStats",
+      "ref": "https:\/\/selfservice.plista.com\/publisher\/statistics\/crossdomain\/draw\/summary?dom=1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }, {
+      "rel": "extCRM",
+      "ref": "https:\/\/crm.plista.com\/tools\/showdomain\/1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }, {
+      "rel": "extAdmin",
+      "ref": "\/other\/domains?info=1029164",
+      "version": null,
+      "identifier": null,
+      "niceName": null,
+      "path": null,
+      "method": null,
+      "prefix": null
+    }]
+  }
+}
