@@ -35,6 +35,7 @@ export class TableDisplayFlexComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
