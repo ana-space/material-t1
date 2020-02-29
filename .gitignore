@@ -8,8 +8,7 @@
 /bazel-out
 
 #
-data/*
-*/data/*
+srt/app/data/*
 # dependencies
 /node_modules
 
