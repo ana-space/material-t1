@@ -21,6 +21,8 @@
     "@angular/platform-browser": "~9.0.0",
     "@angular/platform-browser-dynamic": "~9.0.0",
     "@angular/router": "~9.0.0",
+    "node-sass": "^4.13.1",
+    "plista-styleguide": "git+https://npm-reporter:Lfbx9u8esYv7LULyQCT-@gitlab.plista.com/platforms/planetjs/styleguide.git",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"

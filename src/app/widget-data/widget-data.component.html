@@ -1,36 +1,106 @@
 <div class="cont">
-    <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-        <!-- Position Column -->
-        <ng-container matColumnDef="id">
-          <mat-header-cell *matHeaderCellDef> id. </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="title">
-          <mat-header-cell *matHeaderCellDef> title </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
-        </ng-container>
-      
-        <!-- Weight Column -->
-        <ng-container matColumnDef="kind">
-          <mat-header-cell *matHeaderCellDef> kind </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.kind}} </mat-cell>
-        </ng-container>
-      
-        <!-- Symbol Column -->
-        <ng-container matColumnDef="created_at">
-          <mat-header-cell *matHeaderCellDef> created_at </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.created_at}} </mat-cell>
-        </ng-container>
-
-
-        <ng-container matColumnDef="updated_at">
-            <mat-header-cell *matHeaderCellDef> updated_at </mat-header-cell>
-            <mat-cell *matCellDef="let element"> {{element.updated_at}} </mat-cell>
-        </ng-container>
-      
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      </mat-table>
+  <header _ngcontent-tdf-c0="" class="header" style="background-color: #292929">
+    <div _ngcontent-tdf-c0="" class="header__wrap">
+      <div _ngcontent-tdf-c0="" class="logo__wrap"><img _ngcontent-tdf-c0="" alt="Plista Logo"
+          class="logo logo--plista-2018 m-t-4" src="assets/img/logo/plista-logo-white.svg" width="63" height="34">
+        <div _ngcontent-tdf-c0="" class="logo__text--border">Planet</div>
+      </div>
+      <nav _ngcontent-tdf-c0="" class="header-nav">
+        <ul _ngcontent-tdf-c0="" class="header-nav__list">
+          <li _ngcontent-tdf-c0="" class="header-nav__listitem"><a _ngcontent-tdf-c0="" class="header-nav__link"
+              href="#" id="helpdesk">Help</a></li>
+          <li _ngcontent-tdf-c0="" class="header-nav__listitem">
+            <div _ngcontent-tdf-c0="" class="dropdown">
+              <div _ngcontent-tdf-c0="" class="dropdown__link header-nav__link"><i _ngcontent-tdf-c0=""
+                  class="fas fa-user m-r-8" aria-hidden="true"></i><i _ngcontent-tdf-c0="" class="fas fa-caret-down"
+                  aria-hidden="true"></i></div>
+              <div _ngcontent-tdf-c0=""
+                class="dropdown__content-wrap dropdown__content-wrap--large dropdown__content-wrap--icon">
+                <div _ngcontent-tdf-c0="" class="dropdown__content dropdown__content--arrow-right">
+                  <div _ngcontent-tdf-c0="" class="dropdown__list"><span _ngcontent-tdf-c0=""
+                      class="dropdown__listitem"><span _ngcontent-tdf-c0=""
+                        class="d-flex justify-content-between alig-items-center">Account Overview <i
+                          _ngcontent-tdf-c0="" class="far fa-cog m-t-4 nohover"
+                          aria-hidden="true"></i></span></span><span _ngcontent-tdf-c0=""
+                      class="dropdown__listitem"><span _ngcontent-tdf-c0=""
+                        class="d-flex justify-content-between alig-items-center">Logout <i _ngcontent-tdf-c0=""
+                          class="far fa-sign-out-alt m-t-4 nohover" aria-hidden="true"></i></span></span><span
+                      _ngcontent-tdf-c0=""
+                      class="dropdown__listitem dropdown__listitem--last dropdown__listitem--footer"><i
+                        _ngcontent-tdf-c0="" class="fas fa-user m-r-8" aria-hidden="true"></i>plista@plista.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </div>
+  </header>
+</div>
+<div class="cont">
+  <div class="m-b-24">
+    <div class="p-24 m-r-16 d-inline-block" style="background-color: #40b541"></div>
+    <div class="p-24 m-t-16 d-inline-block" style="background-color: #56bce5"></div>
+  </div>
+  
+  <div class="m-b-24">
+    <div class="p-24 d-inline-block" style="background-color: #40b541"></div>
+    <div class="p-24 m-t-8 d-inline-block" style="background-color: #56bce5"></div>
+  </div>
+  
+  <div class="m-b-24">
+    <div class="p-8 d-inline-block" style="background-color: #40b541"></div>
+    <div class="p-24 m-l-8 d-inline-block" style="background-color: #56bce5"></div>
+  </div>
+  
+  <div class="m-b-24" style="display: inline-block;">
+    <div class="p-48" style="background-color: #3aa03b">
+      <div class="p-32" style="background-color: #2f8330">
+        <div class="p-24" style="background-color: #40b541">
+          <div class="p-16" style="background-color: #6fca70">
+              <div class="p-8" style="background-color: #ebf7ec">
+                  <div class="p-4" style="background-color: #ebf7ec">;-)</div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="cont">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Position Column -->
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> id. </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="title">
+      <mat-header-cell *matHeaderCellDef> title </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.title}} </mat-cell>
+    </ng-container>
+
+    <!-- Weight Column -->
+    <ng-container matColumnDef="kind">
+      <mat-header-cell *matHeaderCellDef> kind </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.kind}} </mat-cell>
+    </ng-container>
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="created_at">
+      <mat-header-cell *matHeaderCellDef> created_at </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.created_at}} </mat-cell>
+    </ng-container>
+
+
+    <ng-container matColumnDef="updated_at">
+      <mat-header-cell *matHeaderCellDef> updated_at </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.updated_at}} </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+</div>
