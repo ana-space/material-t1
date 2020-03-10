@@ -13,6 +13,7 @@ import { DialogExampleComponent } from './dialog-example/dialog-example.componen
 import { TableDisplayFlexComponent } from './table-display-flex/table-display-flex.component';
 import { MatComponent } from './mat/mat.component';
 import { WidgetDataComponent } from './widget-data/widget-data.component';
+import { MatSsComponent } from './mat-ss/mat-ss.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { WidgetDataComponent } from './widget-data/widget-data.component';
     DialogExampleComponent,
     TableDisplayFlexComponent,
     MatComponent,
-    WidgetDataComponent
+    WidgetDataComponent,
+    MatSsComponent
   ],
   entryComponents:[CustomSbackBarComponent, DialogExampleComponent ],
   imports: [
