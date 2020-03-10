@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IData, ILinksItem } from './../data/interface-domain-b';
-import { IRootObjectB } from './../data/domain-b'
+// import { IData, ILinksItem } from './../data/interface-domain-b';
+// import { IRootObjectB } from './../data/domain-b'
 import { _widgets } from './../data/widgets_';
 import { IItemsItem } from './../data/interface';
 @Component({
