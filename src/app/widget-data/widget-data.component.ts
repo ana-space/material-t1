@@ -11,7 +11,7 @@ import { IItemsItem } from './../data/interface';
 export class WidgetDataComponent implements OnInit {
 
   dataSource: IItemsItem[] = _widgets.data.items;
-  displayedColumns: string[]= ["id", "title", "kind", "updated_at", "created_at"];
+  displayedColumns: string[]= ["id", "title", "kind", "Status", "updated_at", "created_at"];
 
   constructor() { }
 
