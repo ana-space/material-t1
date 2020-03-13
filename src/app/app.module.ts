@@ -14,6 +14,7 @@ import { TableDisplayFlexComponent } from './table-display-flex/table-display-fl
 import { MatComponent } from './mat/mat.component';
 import { WidgetDataComponent } from './widget-data/widget-data.component';
 import { MatSsComponent } from './mat-ss/mat-ss.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatSsComponent } from './mat-ss/mat-ss.component';
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule  
+    ReactiveFormsModule  ,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@
   <header _ngcontent-tdf-c0="" class="header" style="background-color: #292929">
     <div _ngcontent-tdf-c0="" class="header__wrap">
       <div _ngcontent-tdf-c0="" class="logo__wrap"><img _ngcontent-tdf-c0="" alt="Plista Logo"
-          class="logo logo--plista-2018 m-t-4" src="assets/img/logo/plista-logo-white.svg" width="63" height="34">
+          class="logo logo--plista-2018 m-t-4" src="https://planet.plista.com/de/img/plista-logo-white.svg" width="63" height="34">
         <div _ngcontent-tdf-c0="" class="logo__text--border">Planet</div>
       </div>
       <nav _ngcontent-tdf-c0="" class="header-nav">
@@ -106,7 +106,7 @@
 </div>
 
 <div class="cont">
-  <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8"  [(ngModel)] = "dataModify">
     <!-- Position Column -->
     <ng-container matColumnDef="id">
       <mat-header-cell *matHeaderCellDef> id. </mat-header-cell>
@@ -140,8 +140,15 @@
             <span class="toggle-text toggle-text--after">On</span>
           </label>
         </div> -->
-        <mat-slide-toggle
-          class="example-margin"></mat-slide-toggle>
+        <mat-slide-toggle 
+          class="example-margin"
+          [(ngModel)]="checked"
+          [checked]="checked"
+          [disabled]="disabled"
+          [color]="color"
+          (change)="statusChange(checked)">
+            status {{checked}}
+        </mat-slide-toggle>
           <!-- [color]="color"
           [checked]="checked"
           [disabled]="disabled"

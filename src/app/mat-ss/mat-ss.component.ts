@@ -18,7 +18,13 @@ export class MatSsComponent implements OnInit {
   checked = false;
   disabled = false;
   constructor() { }
+  getvalue(value) {
+    console.log(value);
+  }
 
+  changed(){
+    console.log(this.checked)
+  }
   ngOnInit(): void {
   }
 
